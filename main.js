@@ -141,9 +141,10 @@ divide.addEventListener('click', () => {
 });
 
 equal.addEventListener('click', () => {
-    let solution = eval(saveVariable);
     console.log(saveVariable);
-    input.value = '';
+    let solution = eval(saveVariable);
+    // console.log(saveVariable);
+    //input.value = '';
     input.value = solution;
 
    // modifiedSaveArray = saveArray.join('');
