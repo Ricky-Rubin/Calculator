@@ -26,16 +26,19 @@ let saveArray = [];
 openBracket.addEventListener('click', () => {
     input.value += '(';
     saveVariable += '('
+    saveArray.push('(');
 });
 
 closeBracket.addEventListener('click', () => {
     input.value += ')';
     saveVariable += ')';
+    saveArray.push(')');
 });
 
 power.addEventListener('click', () => {
     input.value += '^';
     saveVariable += '**';
+    saveArray.push('^');
 });
 
 cancel.addEventListener('click', () => {
@@ -47,26 +50,31 @@ cancel.addEventListener('click', () => {
 seven.addEventListener('click', () => {
     input.value += '7';
     saveVariable += Number(7);
+    saveArray.push('7');
 });
 
 eigth.addEventListener('click', () => {
     input.value += '8';
     saveVariable += Number(8);
+    saveArray.push('8');
 });
 
 nine.addEventListener('click', () => {
     input.value += '9';
     saveVariable += Number(9);
+    saveArray.push('9');
 });
 
 plus.addEventListener('click', () => {
     input.value += '+';
     saveVariable += '+';
+    saveArray.push('+');
 });
 
 four.addEventListener('click', () => {
     input.value += '4';
     saveVariable += Number(4);
+    saveArray.push('4');
 });
 
 five.addEventListener('click', () => {
@@ -90,43 +98,46 @@ minus.addEventListener('click', () => {
 one.addEventListener('click', () => {
     input.value += '1';
     saveVariable += Number(1);
+    saveArray.push('1');
 });
 
 two.addEventListener('click', () => {
     input.value += '2';
     saveVariable += Number(2);
+    saveArray.push('2');
 });
 
 three.addEventListener('click', () => {
     input.value += '3';
     saveVariable += Number(3);
+    saveArray.push('3');
 });
 
 product.addEventListener('click', () => {
     input.value += '×'
     saveVariable += '*';
+    saveArray.push('×')
 });
 
 zero.addEventListener('click', () => {
     input.value += '0';
     saveVariable += Number(0);
+    saveArray.push('.');
 });
 
 dot.addEventListener('click', () => {
     // input.value += '.';
     // saveVariable += '.';
 
-    // let check = saveVariable.slice(0, -1);
-    // console.log(check);
-    // input.value = check;
     saveArray.pop();
-    let check = saveArray.join('');
-    input.value = check;
+    saveVariable = saveArray.join('');
+    input.value = saveVariable;
 });
 
 divide.addEventListener('click', () => {
     input.value += '÷';
     saveVariable += '/';
+    saveArray.push('÷');
 });
 
 equal.addEventListener('click', () => {
@@ -134,5 +145,11 @@ equal.addEventListener('click', () => {
     console.log(saveVariable);
     input.value = '';
     input.value = solution;
-    
-})
+
+   // modifiedSaveArray = saveArray.join('');
+    // console.log(saveVariable)
+    // let solution = eval(modifiedSaveArray);
+    // console.log(modifiedSaveArray)
+    //input.value = '';
+    // input.value = solution;
+});
