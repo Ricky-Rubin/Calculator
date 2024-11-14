@@ -49,19 +49,19 @@ cancel.addEventListener('click', () => {
 
 seven.addEventListener('click', () => {
     input.value += '7';
-    saveVariable += Number(7);
+    saveVariable += 7;
     saveArray.push('7');
 });
 
 eigth.addEventListener('click', () => {
     input.value += '8';
-    saveVariable += Number(8);
+    saveVariable += 8;
     saveArray.push('8');
 });
 
 nine.addEventListener('click', () => {
     input.value += '9';
-    saveVariable += Number(9);
+    saveVariable += 9;
     saveArray.push('9');
 });
 
@@ -73,19 +73,19 @@ plus.addEventListener('click', () => {
 
 four.addEventListener('click', () => {
     input.value += '4';
-    saveVariable += Number(4);
+    saveVariable += 4;
     saveArray.push('4');
 });
 
 five.addEventListener('click', () => {
     input.value += '5';
-    saveVariable += Number(5);
+    saveVariable += 5;
     saveArray.push('5');
 });
 
 six.addEventListener('click', () => {
     input.value += '6';
-    saveVariable += Number(6);
+    saveVariable += 6;
     saveArray.push('6')
 });
 
@@ -97,19 +97,19 @@ minus.addEventListener('click', () => {
 
 one.addEventListener('click', () => {
     input.value += '1';
-    saveVariable += Number(1);
+    saveVariable += 1;
     saveArray.push('1');
 });
 
 two.addEventListener('click', () => {
     input.value += '2';
-    saveVariable += Number(2);
+    saveVariable += 2;
     saveArray.push('2');
 });
 
 three.addEventListener('click', () => {
     input.value += '3';
-    saveVariable += Number(3);
+    saveVariable += 3;
     saveArray.push('3');
 });
 
@@ -121,17 +121,17 @@ product.addEventListener('click', () => {
 
 zero.addEventListener('click', () => {
     input.value += '0';
-    saveVariable += Number(0);
+    saveVariable += 0;
     saveArray.push('.');
 });
 
 dot.addEventListener('click', () => {
-    // input.value += '.';
-    // saveVariable += '.';
+    input.value += '.';
+    saveVariable += '.';
 
-    saveArray.pop();
-    saveVariable = saveArray.join('');
-    input.value = saveVariable;
+    // saveArray.pop();
+    // saveVariable = saveArray.join('');
+    // input.value = saveVariable.toString();
 });
 
 divide.addEventListener('click', () => {
@@ -141,16 +141,5 @@ divide.addEventListener('click', () => {
 });
 
 equal.addEventListener('click', () => {
-    console.log(saveVariable);
-    let solution = eval(saveVariable);
-    // console.log(saveVariable);
-    //input.value = '';
-    input.value = solution;
-
-   // modifiedSaveArray = saveArray.join('');
-    // console.log(saveVariable)
-    // let solution = eval(modifiedSaveArray);
-    // console.log(modifiedSaveArray)
-    //input.value = '';
-    // input.value = solution;
+    input.value = eval(saveVariable);
 });
